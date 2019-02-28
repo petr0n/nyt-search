@@ -45,5 +45,6 @@ $('.clear').on('click', () => {
 });
 
 function clear() {
+    console.log
     $("#articles").empty();
 }
