@@ -7,11 +7,14 @@
  * 
  */
 
- $('.search').on('click', () => {
+ $('#search-btn').on('click', () => {
     var searchTerm = $('#search').val();
     var beginDate = $('#startyr').val();
     var endDate = $('#endyr').val();
     var resultsNumbr = $('#records').val();
+    console.log(resultsNumbr);
+    if (resultsNumbr == 0) resultsNumbr = 10;
+    console.log(resultsNumbr);
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm
     if (beginDate != "") url += "&begin_date=" + beginDate + "0101";
     if (endDate != "") url += "0101&end_date=" + endDate + "0101";
