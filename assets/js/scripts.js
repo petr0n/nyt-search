@@ -1,14 +1,7 @@
 /* scripts */
 
 
-
-/* 
- *
- * click events
- * 
- */
-
- $('.search').on('click', () => {
+$('.search').on('click', () => {
     var searchTerm = "murder";
     var beginDate = 1997;
     var endDate = 2001;
@@ -27,13 +20,11 @@
             );
         }
     });
-}
+});
 
- function search(){}
+$('.clear').on('click', clear);
 
- $('.clear').on('click', clear);
-
- function clear(){}
+function clear(){}
 
 /* 
 *
