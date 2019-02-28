@@ -20,3 +20,11 @@ header h1 {
 .card {
     margin-bottom: 30px;
 }
+
+footer {
+    background-color: slategrey;
+    color: white;
+    line-height: 2.7;
+    height: 40px;
+    text-align: center;
+}
