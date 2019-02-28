@@ -1,12 +1,22 @@
 /* scripts */
+// jshint esversion: 6
 
+/* 
+ *
+ * click events
+ * 
+ */
 
-$('.search').on('click', () => {
-    var searchTerm = "murder";
-    var beginDate = 1997;
-    var endDate = 2001;
-    var resultsNumbr = 10;
-    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&begin_date=" + beginDate + "0101&end_date=" + endDate + "0101&api-key=IG94gZwdcPgG17H5oMtfStdqfpQNpTtw"
+ $('.search').on('click', () => {
+    var searchTerm = $('#search').val();
+    var beginDate = $('#startyr').val();
+    var endDate = $('#endyr').val();
+    var resultsNumbr = $('#records').val();
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm
+    if (beginDate != "") url += "&begin_date=" + beginDate + "0101";
+    if (endDate != "") url += "0101&end_date=" + endDate + "0101";
+    url += "&api-key=IG94gZwdcPgG17H5oMtfStdqfpQNpTtw";
+    
     $.ajax(url, "GET").then ((response) => {
         console.log(url);
         console.log(response);
@@ -21,22 +31,3 @@ $('.search').on('click', () => {
         }
     });
 });
-
-$('.clear').on('click', clear);
-
-function clear(){}
-
-/* 
-*
-* form fields
-* 
-*/
-var search = $("#search").val();
-var records = $("#records").val();
-var startyr = $("#startyr").val();
-var endyr = $("#endyr").val();
-
-
-var articleSpace = $('.articles').html(
-    '<div class="row article-space"></div>'
- );
