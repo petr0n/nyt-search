@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>NYT Search</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NYT Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
     <div class="wrapper">
         <header>
@@ -16,43 +15,41 @@
         </header>
         <div class="container">
             <div class="main">
-                <div class="card">
-
-                    <div class="card-header">
-                        <strong>Search Parameters</strong>
-                    </div>
-
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Search Term:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Number of Records to Retrieve:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Start Year (Optional):</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">End Year (Optional):</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                            </div>
-                        </form>
-                        <a href="#" class="card-link search">Search</a>
-                        <a href="#" class="card-link clear">Clear Results</a>
-                    </div>
+                <div class="card" style="width: 50rem;">
+                <div class="card-header"><strong>
+                    Search Parameters</strong>
                 </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <strong>Top Articles</strong>
-                    </div>
-                    <div class="card-body">
-
-                    </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group search">
+                            <label for="exampleFormControlTextarea1">Search Term:</label>
+                            <textarea class="form-control" id="search" rows="1"></textarea>
+                        </div>
+                        <div class="form-group number-of-records">
+                            <label for="exampleFormControlTextarea1">Number of Records to Retrieve:</label>
+                            <textarea class="form-control" id="records" rows="1"></textarea>
+                        </div>
+                        <div class="form-group start-year">
+                            <label for="exampleFormControlTextarea1">Start Year (Optional):</label>
+                            <textarea class="form-control" id="startyr" rows="1"></textarea>
+                        </div>
+                        <div class="form-group end-year">
+                            <label for="exampleFormControlTextarea1">End Year (Optional):</label>
+                            <textarea class="form-control" id="endyr" rows="1"></textarea>
+                        </div>
+                    </form>
+                    <a href="#" class="card-link">Search</a>
+                    <a href="#" class="card-link">Clear Results</a>
+                </div>
+                </div>
+            
+                <div class="card" style="width: 50rem;">
+                <div class="card-header"><strong>
+                    Top Articles
+                </div></strong>
+                <div class="card-body" id = "articles">
+            
+                </div>
                 </div>
             </div>
         </div>
@@ -62,5 +59,4 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
-
 </html>
