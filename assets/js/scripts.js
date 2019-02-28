@@ -31,7 +31,3 @@
         }
     });
 });
-
-//  $('.clear').on('click', clear);
-
-//  function clear(){};
