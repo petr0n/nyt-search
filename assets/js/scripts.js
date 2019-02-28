@@ -7,7 +7,9 @@
  * 
  */
 
- $('#search-btn').on('click', () => {
+ $('#search-btn').on('click', (event) => {
+    event.preventDefault();
+    clear();
     var searchTerm = $('#search').val();
     var beginDate = $('#startyr').val();
     var endDate = $('#endyr').val();
@@ -31,7 +33,7 @@
                     .text(
                         ((response.docs[i].headline.main != null)
                         ? response.docs[i].headline.main
-                        : response.docs[i].headline.name),
+                        : response.docs[i].headline.name)),
                 "<br>"
             );
         }
@@ -39,5 +41,9 @@
 });
 
 $('.clear').on('click', () => {
-    $("#articles").empty();
+    clear();
 });
+
+function clear() {
+    $("#articles").empty();
+}
