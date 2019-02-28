@@ -10,7 +10,7 @@ function returnResults() {
         console.log(response);
         response = response.response;
         for (i = 0; i < resultsNumbr; i++) {
-            $("#resultsDiv").append(
+            $("#articles").append(
                 $("<a>")
                     .attr("href", response.docs[i].web_url)
                     .text(response.docs[i].headline.main),
