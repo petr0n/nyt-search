@@ -4,6 +4,7 @@ header {
     background-color: steelblue;
     height: 130px;
     line-height: 2;
+    margin-bottom: 30px;
     text-align: center;
     width: 100%;
 }
@@ -14,4 +15,8 @@ header h1 {
 
 .main {
     margin: 0 auto;
+}
+
+.card {
+    margin-bottom: 30px;
 }
