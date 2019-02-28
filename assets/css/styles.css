@@ -1,0 +1,17 @@
+/* custom styles */
+
+header {
+    background-color: steelblue;
+    height: 130px;
+    line-height: 2;
+    text-align: center;
+    width: 100%;
+}
+header h1 {
+    color: white;
+    line-height: 3.1;
+}
+
+.main {
+    margin: 0 auto;
+}
