@@ -40,7 +40,7 @@
     });
 });
 
-$('.clear').on('click', () => {
+$('#clear-btn').on('click', () => {
     clear();
 });
 
